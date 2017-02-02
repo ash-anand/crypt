@@ -13,7 +13,7 @@ class crypter{
 	string key;
 
 public:
-	crypter(string _key){
+	crypter(string _key = Uni){
 		this.key = _key;
 	}
 	
