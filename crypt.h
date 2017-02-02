@@ -9,31 +9,28 @@ using namespace std;
 #define KEY2 110099105
 char Uni[6];
 
-class class_key{
+class crypter{
 	string key;
-	string text;
-	string encrypted_txt;
-	bool encrypted;
+
 public:
-	class_key(string _key){
-		encrypted = false;
-		text = NULL;
+	crypter(string _key){
 		this.key = _key;
 	}
 	
-	void encrypt(string _text){
-		if(encrypted){
-			cout<<"Already encrypted";
-			return;
-		}
-		this.text = _text;
+	string encrypt(string text){
+		string 	encrypted_txt;
 		for(int i = 0; i < text.length(); i++ ){
 			encrypted_txt += text[i] + key[i%key.length()];
 		}
-		encrypted = true;
+		return encrypted_txt;
 	}
 
-
+	string decrypt(string encrypted_txt){
+		string text;
+		for(int i = 0; i < encrypted_txt.length(); i++)
+			text += encrypted_txt[i] - key[i%key.length()];
+		return text;
+	}
 }
 
 #endif
