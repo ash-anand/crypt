@@ -20,6 +20,7 @@ public:
 		text = NULL;
 		this.key = _key;
 	}
+	
 	void encrypt(string _text){
 		if(encrypted){
 			cout<<"Already encrypted";
@@ -31,4 +32,8 @@ public:
 		}
 		encrypted = true;
 	}
+
+
 }
+
+#endif
