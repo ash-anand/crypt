@@ -7,7 +7,7 @@ using namespace std;
 
 #define KEY1 080114105
 #define KEY2 110099105
-char Uni[6];
+char Uni[6] = {080,114,105,110,099,105};
 
 class crypter{
 	string key;
